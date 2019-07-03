@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- access icons from Font Awesome -->
+        <script src="https://kit.fontawesome.com/cd00e0e5af.js"></script>
+
+        <!-- fonts that will be using -->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+
+        <!-- reference the normal and mobile stylsheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+        <!-- referencing our favicon (icon that is displayed on the Chrome tab) -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <title>NewsGrid | About</title>
+
+    </head>
+
+    <body>
+        
+        <!-- main navigation bar -->
+        <!-- setting this as the grid container would only make the div inside the only grid item... -->
+        <nav id="main-nav">
+
+            <!-- container to set max-width -->
+            <!-- ...so also make this container the grid container! -->
+            <div class="container">
+
+                <img src="img/logo.png" alt="NewsGrid" class="logo">
+
+                <!-- this div will be a grid container and serve to place elements inside navbar (social icons) -->
+                <div class="social">
+
+                    <!-- icon links to each social media: FB, TW, IG, YT -->
+                    <a href="http://facebook.com" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+
+                    <a href="http://twitter.com" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+
+                    <a href="http://instagram.com" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+
+                    <a href="http://youtube.com" target="_blank">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+
+                </div>
+
+                <!-- list of links to... -->
+                <ul>
+
+                    <!-- home page -->
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <!-- and about page -->
+                    <li>
+                        <a href="about.html" class="current">About</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- about section -->
+        <section class="about">
+
+            <!-- container for mad width -->
+            <div class="container">
+
+                <!-- page container for our grid container (can reuse this class to implement grids quickly) -->
+                <!-- will have two children: an article and a sidebar -->
+                <div class="page-container">
+
+                    <!-- first child: article with a header and lots of text -->
+                    <article class="card">
+
+                        <h1 class="l-heading">
+                            About Our Organization
+                        </h1>
+
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Corporis ipsum ex numquam, maxime explicabo facere impedit, 
+                            reprehenderit nulla eos reiciendis fugiat ipsa. Maxime expedita 
+                            accusantium optio quia blanditiis molestias fugiat consequuntur, 
+                            dolor neque, eaque rerum cupiditate minus velit amet at distinctio 
+                            sint corporis nobis nemo aut sapiente? Officiis, culpa sapiente?
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis 
+                            nihil optio eligendi dolorem porro, obcaecati ipsum similique dolores 
+                            maxime consequuntur dignissimos quam vitae cupiditate fugiat tenetur 
+                            quidem atque soluta unde! Exercitationem porro placeat omnis ad voluptatum 
+                            non dignissimos consequuntur quam veniam iste beatae esse temporibus, 
+                            nemo qui officia similique nisi explicabo maxime fugiat nihil, sint eius. 
+                            Dolorum rem nostrum eum fuga a possimus, saepe, eius reiciendis, accusantium 
+                            quae quisquam. Facilis officiis ipsam minus amet officia tempore, quos eaque 
+                            beatae nobis exercitationem sequi quas suscipit vero deleniti veniam. 
+                            Praesentium repudiandae eos error, similique libero ab optio vitae minima. 
+                            Accusamus, nulla. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Explicabo dolores aliquam iusto pariatur aliquid sequi incidunt maiores id quisquam 
+                            quam velit, reiciendis consectetur natus cumque quas modi perferendis quibusdam 
+                            deserunt facere soluta mollitia! Maxime minima sapiente laboriosam asperiores. 
+                            Facere cupiditate animi iusto. Nemo, quo minima ex temporibus totam dicta iure.
+                        </p>
+
+                    </article>
+
+                    <!-- second child: sidebar with "join us!" information -->
+                    <aside class="card bg-primary">
+
+                        <h2>Join Our Club</h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, possimus.
+                        </p>
+
+                        <a href="#" class="btn btn-dark btn-block">
+                            Join Now
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- footer section -->
+        <footer id="main-footer" class="py-2">
+
+            <!-- container that will operate as the grid container (five children) -->
+            <div class="container footer-container">
+
+                <!-- first child: div that contains logo light image and text -->
+                <div>
+
+                    <img src="img/logo_light.png" alt="NewsGrid">
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Sint recusandae laboriosam illo natus tempore. 
+                        Veritatis aperiam id soluta maiores facilis.
+                    </p>
+
+                </div>
+
+                <!-- second child: div that contains the emails newsletter form -->
+                <div>
+
+                    <h3>Email Newsletter</h3>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, iusto.
+                    </p>
+
+                    <form action="#">
+                        <input type="email" placeholder="Enter Email">
+                        <input type="submit" value="Suscribe" class="btn btn-primary">
+                    </form>
+
+                </div>
+
+                <!-- third child: div that contains the site links -->
+                <div>
+
+                    <h3>Site Links</h3>
+
+                    <ul class="list">
+
+                        <li>
+                            <a href="#">Help & Support</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- fourth child: div with joining information -->
+                <div>
+
+                    <h2>Join Our Club</h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit!
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">Join Us</a>
+
+                </div>
+
+                <!-- fifth child: copyright (will span across all width screen) -->
+                <div>
+                    <p>Copyright &copy; 2019</p>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

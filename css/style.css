@@ -1,0 +1,619 @@
+/* General CSS Styling */
+
+/* Variables */
+
+/* root scope */
+:root {
+
+    /* set colors: main color, secondary color, light and dark colors */
+    --primary-color: #c72727;
+    --secondary-color: #f99500;
+    --light-color: #f3f3f3;
+    --dark-color: #333333;
+
+    /* max width variable */
+    --max-width: 1100px;
+
+}
+
+/* .category scope (coloring of news sections like sports, enternatinment, technology, etc): all elements that implement this class will have access to this variables */
+.category {
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff
+}
+
+/* CSS Reset */
+
+/* remove padding, margin and padding will not add to final width */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General (Tag) Styling */
+
+/* targeting body */
+body {
+
+    /* setting a general font */
+    font-family: 'Lato', sans-serif;
+
+    /* setting line height */
+    line-height: 1.5;
+
+    /* setting body background color */
+    background: var(--light-color);
+
+}
+
+/* targeting all links */
+a {
+
+    /* set text color */
+    color: #333;
+
+    /* no decorations (underline) */
+    text-decoration: none;
+
+}
+
+/* target all unordered lists */
+ul {
+    /* erradicate bullet points */
+    list-style: none;
+}
+
+/* target all images */
+img {
+    /* make them occupy full width of parent container */
+    width: 100%;
+}
+
+/* target all types pf headers */
+h1, h2, h3, h4, h5, h6 {
+    
+    /* set a particular font to these elements */
+    font-family: 'Staatliches', cursive;
+
+    /* set a general margin bottom to separate headers from adjacent elements */
+    margin-bottom: 0.55rem;
+
+    /* set a line height */
+    line-height: 1.3;
+
+}
+
+/* target all paragraphs: add top/bottom margin */
+p {
+    margin: 0.5rem 0;
+}
+
+/* Utility (Class) Styling */
+
+/* target all containers */
+.container {
+
+    /* set a max width */
+    max-width: var(--max-width);
+
+    /* always auto-center these containers */
+    margin: auto;
+
+    /* add some general padding */
+    padding: 0 2rem;
+
+    /* content outside of these containers will be hidden */
+    overflow: hidden;
+
+}
+
+/* target all category divs */
+.category {
+
+    /* make it an inline block since we will add padding */
+    display: inline-block;
+
+    /* color text, font size */
+    color: #fff;
+    font-size: 0.55rem;
+
+    /* make it uppercase */
+    text-transform: uppercase;
+
+    /* add some padding, round corners */
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+
+    /* add some margin to push down adjacent content */
+    margin-bottom: 0.5rem;
+
+}
+
+/* target all category-sports divs */
+.category-sports {
+    /* change to particular color */
+    background: var(--sports-color);
+}
+
+/* target all category-ent divs */
+.category-ent {
+    /* change to particular color */
+    background: var(--ent-color);
+}
+
+/* target all category-tech divs */
+.category-tech {
+    /* change to particular color */
+    background: var(--tech-color);
+}
+
+/* target all buttons */
+.btn {
+
+    /* make them inline block to add some padding */
+    display: inline-block;
+
+    /* erase border */
+    border: none;
+
+    /* set general background color and text color */
+    background: var(--dark-color);
+    color: #fff;
+
+    /* add some padding */
+    padding: 0.5rem 1.5rem;
+
+}
+
+/* target all block buttons */
+.btn-block {
+
+    /* buttons that implement this class will be treated as block */
+    display: block;
+
+    /* occupy also 100% if width of parent container */
+    width: 100%;
+
+    /* and align their text to the center */
+    text-align: center;
+
+}
+
+/* target all light buttons: change background */
+.btn-light {
+    background: var(--light-color);
+}
+
+/* target all primary buttons: change background */
+.btn-primary {
+    background: var(--primary-color);
+}
+
+/* target all secondary buttons: change background */
+.btn-secondary {
+    background: var(--secondary-color);
+}
+
+/* target all buttons when being hovered: alter opacity */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* targeting all cards (news containers) */
+.card {
+    /* set background color and some padding (it's just a box!) */
+    background: #fff;
+    padding: 1rem;
+}
+
+/* target all dark backgrounds: set background color and text color */
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+/* target all headers and links inside all possible backgrounds: make color text white */
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark a, 
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary a, 
+.bg-secondary h1, .bg-secondary h2, .bg-secondary h3, .bg-secondary a {
+    color: #fff;
+}
+
+/* target all primary backgrounds: set background color and text color */
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* target all secondary backgrounds: set background color and text color */
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* padding in y-axis utility classes */
+.py-1 {
+    padding: 1.5rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
+/* general padding utility classes */
+.p-1 {
+    padding: 1.5rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+/* large heading utility class: big font size */
+.l-heading {
+    font-size: 3rem;
+}
+
+/* targeting list items on all lists */
+.list li {
+
+    /* add some padding */
+    padding: 0.5rem 0;
+
+    /* add border bottom to separate items */
+    border-bottom: #555 dotted 1px;
+
+    /* make the list item occupy 90% of parent container (unordered list) */
+    width: 90%;
+
+}
+
+/* targeting all page containers (for inner pages) */
+.page-container {
+
+    /* make it a grid container */
+    display: grid;
+
+    /* 2 columns with a 5:2 size ratio */
+    grid-template-columns: 5fr 2fr;
+
+    /* add some margin and gap between grid items */
+    margin: 2rem 0;
+    grid-gap: 1.5rem;
+
+}
+
+/* targeting first child (of any type) inside the page container: span it vertically through 3 rows */
+.page-container > *:first-child {
+    grid-row: 1 / span 3;
+}
+
+/* Unique (Id) Styling */
+
+/* Home Page */
+
+/* Navigation Bar */
+
+/* targeting the main navbar section */
+#main-nav {
+
+    /* set a general background */
+    background: #fff;
+
+    /* make this navbar stick to the top once webpage scrolls down */
+    position: sticky;
+    top: 0;
+
+    /* change z-index so it always stays up front regardless of other content */
+    z-index: 2;
+
+}
+
+/* target the container that is inside the #navbar section */
+#main-nav .container {
+
+    /* make it a grid container */
+    /* children: logo img, a div.social and the unordered list of links */
+    display: grid;
+
+    /* this grid will be made up of three columns with a size ratio of 6:3:2 */
+    /* 6/11 will be occupied by first column, 3/11 by the second one and 2/11 by the third one */
+    grid-template-columns: 6fr 3fr 2fr;
+
+    /* set general padding */
+    padding: 1rem;
+
+    /* align vertically all the items inside this grid */
+    /* this property can be used on both flex and grid displays */
+    align-items: center;
+
+}
+
+/* target the logo inside the container inside the #main-nav section */
+/* this is a child grid from the .container */
+#main-nav .container .logo {
+    /* change its width */
+    width: 180px;
+}
+
+/* target the unordered list inside the navbar container */
+/* this is a child grid from the .container */
+#main-nav .container ul {
+    
+    /* make this child grid a flex container to easily arrange the list items inside */
+    /* children: li tags that contains the links to index.html and about.html */
+    display: flex;
+
+    /* move this flex container to the far right of the webpage */
+    justify-self: end;
+
+}
+
+/* target links inside each list item on unordered list inside the navbar container */
+#main-nav .container ul li a {
+
+    /* add some padding */
+    padding: 0.75rem;
+
+    /* make text link bold */
+    font-weight: bold;
+
+}
+
+/* same as above but targeting link that implements the current class */
+#main-nav .container ul li a.current {
+    /* set background color and text color */
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* target links inside each list item on unordered list inside the navbar container when they are being hovered */
+#main-nav .container ul li a:hover {
+    /* change background color and color text */
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* target the social div inside the navbar container */
+#main-nav .container .social {
+    /* center content within itself */
+    justify-self: center;
+}
+
+/* target all icons inside this social div */
+#main-nav .container .social i {
+    /* change color icon and add some right margin to separate icons */
+    color: #777;
+    margin-right: 0.5rem;
+}
+
+/* Showcase */
+
+/* target the showcase section */
+#showcase {
+
+    /* edit color text, background color */
+    color: #fff;
+    background: #333;
+
+    /* add some padding */
+    padding: 2rem;
+
+    /* relative position since we will create a virtual child inside that will be positioned absolute */
+    /* this is all for our overlay */
+    position: relative;
+
+}
+
+/* create first virtual child on #showcase */
+#showcase:before {
+
+    /* no content */
+    content: '';
+
+    /* set background image */
+    background: url('../img/featured.jpg') no-repeat center center/cover;
+
+    /* position absolute (relative to #showcase container) */
+    position: absolute;
+
+    /* position this image at the top-left */
+    top: 0;
+    left: 0;
+
+    /* make this image background occupy full width and height */
+    width: 100%;
+    height: 100%;
+
+    /* set some opacity */
+    opacity: 0.4;
+
+}
+
+/* target the showcase container inside the #showcase section */
+#showcase .container .showcase-container {
+
+    /* make it a grid container */
+    /* children: only one .showcase-content div */
+    display: grid;
+
+    /* make this grid of 2 columns of the same width */
+    /* this will just push the .showcase-content div to the first column and leave the second one empty since no child exists for that */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* center content */
+    justify-content: center;
+    align-items: center;
+
+    /* set height to half of viewport */
+    height: 50vh;
+
+}
+
+/* target showcase content inside the grid container */
+#showcase .container .showcase-container .showcase-content {
+    /* move up front these content (headers, paragraph and links) */
+    z-index: 1;
+}
+
+/* target paragraphs inside this showcase content */
+#showcase .container .showcase-container .showcase-content p {
+    /* add margin to push down "Read More" button */
+    margin-bottom: 1rem;
+}
+
+/* Home Articles */
+
+/* target the articles-container inside #home-articles section */
+#home-articles .container .articles-container {
+
+    /* make it a grid container */
+    /* children: seven card divs */
+    display: grid;
+
+    /* this grid will be made up of three same-sized columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* add some margin between each grid element */
+    grid-gap: 1rem;
+
+}
+
+/* targeting the first and last news cards inside this grid container */
+#home-articles .container .articles-container > *:first-child, 
+#home-articles .container .articles-container > *:last-child {
+
+    /* make them also a grid */
+    /* two children: img, and a div with a category div, header and paragraph */
+    display: grid;
+
+    /* span these elements across two equal-sized columns */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* add margin */
+    grid-gap: 1rem;
+
+    /* align vertically these elements */
+    align-items: center;
+
+    /* span horizontally this children across two blocks */
+    grid-column: 1 / span 2;
+
+}
+
+/* target just the last news card */
+#home-articles .container .articles-container > *:last-child {
+    /* override the span since this card starts at a different initial position */
+    grid-column: 2 / span 2;
+}
+
+/* Footer */
+
+/* target footer section: set background and color */
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+/* target the footer container on footer section */
+#main-footer .footer-container {
+
+    /* make it a grid container */
+    /* children: five divs */
+    display: grid;
+
+    /* create four columns of equal size */
+    /* fifth child will be pushed down (Copyright text) */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* margin to all elements */
+    grid-gap: 1.5rem;
+
+}
+
+/* target logo icon inside footer container: change size */
+#main-footer .footer-container img {
+    width: 150px;
+}
+
+/* target all links inside the footer container: set text color */
+#main-footer .footer-container ul li a {
+    color: white;
+}
+
+/* same as above but when those links are being hovered; change text color */
+#main-footer .footer-container ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* target directly the last child (regardless of type) of the footer container (copyright) */
+#main-footer .footer-container > *:last-child {
+
+    /* set background color */
+    background: #444;
+
+    /* span across all grid width */
+    grid-column: 1 / span 4;
+
+    /* add some padding, center text and change font size */
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+
+}
+
+/* target on the form, the email type input */
+#main-footer .footer-container input[type='email'] {
+
+    /* make it occupy 90% of parent container width */
+    width: 90%;
+
+    /* add margin and padding for spacing */
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+/* target on the form, the actual subscribe button: occupy 90% of parent width */
+#main-footer .footer-container input[type='submit'] {
+    width: 90%;
+}
+
+/* About Page */
+
+/* Article Page */
+
+/* targeting the meta class inside the article section */
+#article .meta {
+
+    /* make it a flex container */
+    display: flex;
+
+    /* space between horizontal: both flex items will go to the edges */
+    justify-content: space-between;
+
+    /* align items vertically to the center */
+    align-items: center;
+
+    /* set background color */
+    background: #eee;
+
+    /* set some padding */
+    padding: 0.5rem;
+
+}
+
+/* targeting the category icon inside meta information: add some margin to really center it */
+#article .meta .category {
+    margin-top: 0.4rem;
+}

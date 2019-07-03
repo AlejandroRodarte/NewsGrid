@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- access icons from Font Awesome -->
+        <script src="https://kit.fontawesome.com/cd00e0e5af.js"></script>
+
+        <!-- fonts that will be using -->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+
+        <!-- reference the normal and mobile stylsheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+        <!-- referencing our favicon (icon that is displayed on the Chrome tab) -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <title>NewsGrid | Latest News</title>
+
+    </head>
+
+    <body>
+        
+        <!-- main navigation bar -->
+        <!-- setting this as the grid container would only make the div inside the only grid item... -->
+        <nav id="main-nav">
+
+            <!-- container to set max-width -->
+            <!-- ...so also make this container the grid container! -->
+            <div class="container">
+
+                <img src="img/logo.png" alt="NewsGrid" class="logo">
+
+                <!-- this div will be a grid container and serve to place elements inside navbar (social icons) -->
+                <div class="social">
+
+                    <!-- icon links to each social media: FB, TW, IG, YT -->
+                    <a href="http://facebook.com" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+
+                    <a href="http://twitter.com" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+
+                    <a href="http://instagram.com" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+
+                    <a href="http://youtube.com" target="_blank">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+
+                </div>
+
+                <!-- list of links to... -->
+                <ul>
+
+                    <!-- home page -->
+                    <li>
+                        <a href="index.html" class="current">Home</a>
+                    </li>
+
+                    <!-- and about page -->
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- second section: showcase -->
+        <header id="showcase">
+
+            <!-- container just for max-width limitations -->
+            <div class="container">
+
+                <!-- this showcase container div will be the actual grid container -->
+                <div class="showcase-container">
+
+                    <!-- only one child grid: a div that contains the showcase content -->
+                    <div class="showcase-content">
+
+                        <!-- first showcase content: sports category -->
+                        <div class="category category-sports">
+                            Sports
+                        </div>
+
+                        <h1>
+                            Some Sports Article
+                        </h1>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Animi ex officia exercitationem cupiditate quae sapiente 
+                            voluptates est molestias, neque adipisci iusto cum dolorum 
+                            quas illum corrupti voluptatum? Quaerat, architecto? Accusantium!
+                        </p>
+
+                        <a href="article.html" class="btn btn-primary">
+                            Read More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- third section, actual news grid with home articles -->
+        <section id="home-articles" class="py-2">
+
+            <div class="container">
+
+                <h2>Editor Picks</h2>
+    
+                <!-- main container of the articles -->
+                <!-- this will be the main grid container with seven children representing each news "card" by the article HTML tag -->
+                <div class="articles-container">
+    
+                    <!-- each "box" that contains the news content is called a "card" -->
+                    <!-- the first news card will be a grid container with two children: the news img and a div with the category, header text and paragraph -->
+                    <article class="card">
+    
+                        <!-- image -->
+                        <img src="img/articles/ent1.jpg" alt="">
+    
+                        <!-- div with... -->
+                        <div>
+    
+                            <!-- ...category name -->
+                            <div class="category category-ent">
+                                Entertainment
+                            </div>
+    
+                            <!-- header text with link... -->
+                            <h3>
+                                <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                            </h3>
+    
+                            <!-- and a descriptive paragraph -->
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                                dolores quae earum libero dolorem!
+                            </p>
+    
+                        </div>
+    
+                    </article>
+
+                    <!-- this second card does not have an image and will not be a grid container since it is simple to arrange within -->
+                    <article class="card bg-dark">
+    
+                        <!-- ...category name -->
+                        <div class="category category-sports">
+                            Sports
+                        </div>
+
+                        <!-- header text with link... -->
+                        <h3>
+                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                        </h3>
+
+                        <!-- and a descriptive paragraph -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                            dolores quae earum libero dolorem!
+                        </p>
+    
+                    </article>
+                    
+                    <!-- this third card has an image and will not be a grid container since it is simple to arrange within -->
+                    <article class="card">
+
+                        <img src="img/articles/tech1.jpg" alt="">
+
+                        <!-- ...category name -->
+                        <div class="category category-tech">
+                            Technology
+                        </div>
+
+                        <!-- header text with link... -->
+                        <h3>
+                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                        </h3>
+
+                        <!-- and a descriptive paragraph -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                            dolores quae earum libero dolorem!
+                        </p>
+    
+                    </article>
+
+                    <!-- this fourth card has an image but at the bottom and will not be a grid container since it is simple to arrange within -->
+                    <article class="card">
+
+                        <!-- ...category name -->
+                        <div class="category category-sports">
+                            Sports
+                        </div>
+
+                        <!-- header text with link... -->
+                        <h3>
+                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                        </h3>
+
+                        <!-- and a descriptive paragraph -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                            dolores quae earum libero dolorem!
+                        </p>
+
+                        <img src="img/articles/sports1.jpg" alt="">
+    
+                    </article>
+
+                    <!-- this fifth card has an image and will not be a grid container since it is simple to arrange within -->
+                    <article class="card">
+
+                        <img src="img/articles/tech2.jpg" alt="">
+
+                        <!-- ...category name -->
+                        <div class="category category-tech">
+                            Technology
+                        </div>
+
+                        <!-- header text with link... -->
+                        <h3>
+                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                        </h3>
+
+                        <!-- and a descriptive paragraph -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                            dolores quae earum libero dolorem!
+                        </p>
+    
+                    </article>
+
+                    <!-- this sixth card does not have an image and will not be a grid container since it is simple to arrange within -->
+                    <article class="card bg-primary">
+
+                        <!-- ...category name -->
+                        <div class="category category-sports">
+                            Sports
+                        </div>
+
+                        <!-- header text with link... -->
+                        <h3>
+                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                        </h3>
+
+                        <!-- and a descriptive paragraph -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                            dolores quae earum libero dolorem!
+                        </p>
+    
+                    </article>
+
+                    <!-- the seventh news card will be a grid container with two children: the news img at the bottom and a div with the category, header text and paragraph -->
+                    <article class="card">
+    
+                        <!-- div with... -->
+                        <div>
+    
+                            <!-- ...category name -->
+                            <div class="category category-ent">
+                                Entertainment
+                            </div>
+    
+                            <!-- header text with link... -->
+                            <h3>
+                                <a href="article.html">Lorem ipsum dolor sit amet.</a>
+                            </h3>
+    
+                            <!-- and a descriptive paragraph -->
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Quibusdam perferendis tenetur explicabo, dolore quos ab 
+                                dolores quae earum libero dolorem!
+                            </p>
+    
+                        </div>
+
+                        <!-- image -->
+                        <img src="img/articles/ent2.jpg" alt="">
+    
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- footer section -->
+        <footer id="main-footer" class="py-2">
+
+            <!-- container that will operate as the grid container (five children) -->
+            <div class="container footer-container">
+
+                <!-- first child: div that contains logo light image and text -->
+                <div>
+
+                    <img src="img/logo_light.png" alt="NewsGrid">
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Sint recusandae laboriosam illo natus tempore. 
+                        Veritatis aperiam id soluta maiores facilis.
+                    </p>
+
+                </div>
+
+                <!-- second child: div that contains the emails newsletter form -->
+                <div>
+
+                    <h3>Email Newsletter</h3>
+
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, iusto.
+                    </p>
+
+                    <form action="#">
+                        <input type="email" placeholder="Enter Email">
+                        <input type="submit" value="Suscribe" class="btn btn-primary">
+                    </form>
+
+                </div>
+
+                <!-- third child: div that contains the site links -->
+                <div>
+
+                    <h3>Site Links</h3>
+
+                    <ul class="list">
+
+                        <li>
+                            <a href="#">Help & Support</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- fourth child: div with joining information -->
+                <div>
+
+                    <h2>Join Our Club</h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit!
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">Join Us</a>
+
+                </div>
+
+                <!-- fifth child: copyright (will span across all width screen) -->
+                <div>
+                    <p>Copyright &copy; 2019</p>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

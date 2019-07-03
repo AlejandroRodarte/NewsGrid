@@ -1,0 +1,104 @@
+/* Mobile Stylesheet */
+
+/* Home Page */
+
+/* Navigation Bar */
+
+/* targeting social div inside main nav bar */
+#main-nav .social {
+    /* disappear all social icons from browser */
+    display: none;
+}
+
+/* targeting the main container on the navbar */
+#main-nav .container {
+
+    /* originally, this grid container was made up of 3 columns: change it to just 1 */
+    grid-template-columns: 1fr;
+
+    /* alter grid gap */
+    grid-gap: 1.2rem;
+
+}
+
+/* targeting the unordered list of main navbar and the logo */
+#main-nav .container ul, 
+#main-nav .container .logo {
+    /* center this grid items to the center */
+    justify-self: center;
+}
+
+/* targeting the links inside the mentioned unordered list */
+#main-nav .container ul li a {
+    /* change the padding to make them smaller */
+    padding: 0.5rem;
+}
+
+/* Home Articles */
+
+/* targeting the articles grid container */
+#home-articles .container .articles-container {
+    /* this grid was made up of 3 columns: change it to just 2 */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* targeting the first and last cards (grid items) from this grid container */
+#home-articles .container .articles-container > *:first-child, 
+#home-articles .container .articles-container > *:last-child {
+
+    /* this grid items were also grid containers of 2 columns: change it to just 1 */
+    grid-template-columns: 1fr;
+
+    /* position them properly in the grid for mobile devices */
+    grid-column: 1;
+
+}
+
+/* Smartphones */
+@media(max-width: 600px) {
+
+    /* stack grid items (grid changes to just one column) */
+
+    /* Home Page */
+
+    /* targeting all containers that implement a grid container */
+    #showcase .container .showcase-container, 
+    #home-articles .container .articles-container, 
+    #main-footer .footer-container {
+        /* make them just one colum so grid item stack */
+        grid-template-columns: 1fr;
+    }
+
+    /* targeting last child of the footer (copyright, which spanned across 4 columns) */
+    #main-footer .footer-container > *:last-child {
+        /* make it span just across 1 */
+        grid-column: 1;
+    }
+    
+    /* targeting first and second sections of the footer */
+    #main-footer .footer-container > div:first-child, 
+    #main-footer .footer-container > div:nth-child(2) {
+        /* add some border and padding */
+        border-bottom: 1px dotted #444;
+        padding: 1rem;
+    }
+
+    /* About and Article Page */
+
+    /* make their grid containers of one column and center text */
+    .page-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* the first grid item of the page container originally spaned through 3 rows: reduce it to 1 */
+    .page-container > *:first-child {
+        grid-row: 1;
+    }
+
+    /* change large heading font size */
+    .l-heading {
+        font-size: 2rem;
+    }
+
+}
